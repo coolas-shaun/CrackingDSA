@@ -28,7 +28,7 @@ public class IntegerLinkedLIst {
             current = current.getNext();
         }
         System.out.print("NULL");
-        System.out.println("f");
+        System.out.println("");
     }
 
     public boolean isEmpty(){
