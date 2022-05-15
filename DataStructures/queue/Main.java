@@ -14,7 +14,8 @@ public class Main {
         Employee mikeWilson = new Employee("Mike", "Wilson", 3245);
         Employee billEnd = new Employee("Bill", "End", 78);
 
-        ArrayQueue queue = new ArrayQueue(10);
+        //ArrayQueue queue = new ArrayQueue(10);
+        CircularQueue queue = new CircularQueue(5);
 
         queue.add(janeJones);
         queue.add(johnDoe);

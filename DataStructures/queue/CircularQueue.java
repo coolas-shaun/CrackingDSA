@@ -23,6 +23,7 @@ public class CircularQueue {
             back = numItems;
         }
         queue[back] = emp;
+        // wrapping the back element to 0th index
         if(back< queue.length-1)
             back++;
         else
@@ -39,6 +40,8 @@ public class CircularQueue {
         if(size()==0){
             front = back = 0;
         }
+        else if(front== queue.length)
+            front=0;
         return removedElement;
     }
 
@@ -51,8 +54,18 @@ public class CircularQueue {
 
     public void printQueue(){
         System.out.println("Printing the queue: ");
-        for (int i = front; i <back ; i++) {
-            System.out.println(queue[i]);
+        if(back>=front) {
+            for (int i = front; i < back; i++) {
+                System.out.println(queue[i]);
+            }
+        }
+        else{
+            for (int i = front; i < queue.length; i++) {
+                System.out.println(queue[i]);
+            }
+            for (int i = 0; i <back ; i++) {
+                System.out.println(queue[i]);
+            }
         }
     }
 
